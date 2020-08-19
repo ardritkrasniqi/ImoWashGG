@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.adminFragment.AdminFragment">
+
+
+        <TextView
+            android:id="@+id/historie_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:fontFamily="@font/roboto"
+            android:text="Historie"
+            android:textColor="@color/blackColor"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="@+id/admin_recycler"
+            app:layout_constraintHorizontal_bias="0.524"
+            app:layout_constraintStart_toStartOf="@+id/admin_recycler"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/admin_recycler"
+            android:layout_width="350dp"
+            android:layout_height="400dp"
+            android:layout_marginTop="10dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.856"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/historie_text"
+            app:spanCount="2"
+            tools:listitem="@layout/item_list" />
+
+        <CalendarView
+            android:id="@+id/kalendari"
+            android:layout_width="506dp"
+            android:layout_height="248dp"
+            android:layout_marginStart="48dp"
+            app:layout_constraintBottom_toBottomOf="@+id/admin_recycler"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/admin_recycler"
+            app:layout_constraintVertical_bias="1.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

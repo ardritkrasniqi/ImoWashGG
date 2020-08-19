@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:clickable="true"
+        android:id="@+id/parent_layout"
+        tools:context=".ui.workFragment.WorkFragment"
+        android:focusable="true">
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:fontFamily="@font/roboto"
+            android:text="Mer, 29.07.20"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextClock
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:textSize="20sp"
+            android:format24Hour="@string/timeFormat"
+
+            app:layout_constraintEnd_toEndOf="@id/date"
+            app:layout_constraintTop_toBottomOf="@id/date" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:fontFamily="@font/roboto"
+            android:text="IMO WASH GG"
+            android:textColor="#000000"
+            android:textSize="25sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="154dp" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/felgen2e"
+            android:layout_width="250dp"
+            android:layout_height="200dp"
+            android:clickable="true"
+            android:stateListAnimator="@animator/animation_card"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/felgen3e"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout10"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintEnd_toStartOf="@+id/constraintLayout9"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <ImageView
+                    android:id="@+id/felgen1image"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="10dp"
+                    android:tint="#1A237E"
+                    android:src="@drawable/ic_wheel_simple"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.505"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="Felgen"
+                    android:textColor="@color/blackColor"
+                    android:textSize="25sp"
+                    app:layout_constraintEnd_toEndOf="@+id/felgen1image"
+                    app:layout_constraintHorizontal_bias="0.545"
+                    app:layout_constraintStart_toStartOf="@+id/felgen1image"
+                    app:layout_constraintTop_toBottomOf="@+id/felgen1image" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="2€"
+                    android:textSize="25sp"
+                    android:textColor="@color/blackColor"
+                    app:layout_constraintEnd_toEndOf="@+id/textView2"
+                    app:layout_constraintStart_toStartOf="@+id/textView2"
+                    app:layout_constraintTop_toBottomOf="@+id/textView2" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/felgen3e"
+            android:layout_width="250dp"
+            android:layout_height="200dp"
+            android:stateListAnimator="@animator/animation_card"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/felgen2e"
+            app:layout_constraintEnd_toStartOf="@+id/express18e"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/felgen2e"
+            app:layout_constraintTop_toTopOf="@+id/felgen2e">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout9"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintEnd_toStartOf="@+id/constraintLayout11"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/constraintLayout10">
+
+                <ImageView
+                    android:id="@+id/felgen2image"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="10dp"
+                    android:tint="#311B92"
+                    android:src="@drawable/ic_wheel_simple"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/felgen2text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="Felgen"
+                    android:textColor="@color/blackColor"
+                    android:textSize="25sp"
+                    app:layout_constraintEnd_toEndOf="@+id/felgen2image"
+                    app:layout_constraintHorizontal_bias="0.545"
+                    app:layout_constraintStart_toStartOf="@+id/felgen2image"
+                    app:layout_constraintTop_toBottomOf="@+id/felgen2image" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="3€"
+                    android:textSize="25sp"
+                    android:textColor="@color/blackColor"
+                    app:layout_constraintEnd_toEndOf="@+id/felgen2text"
+                    app:layout_constraintStart_toStartOf="@+id/felgen2text"
+                    app:layout_constraintTop_toBottomOf="@+id/felgen2text" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/express18e"
+            android:layout_width="250dp"
+            android:layout_height="200dp"
+            android:stateListAnimator="@animator/animation_card"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/felgen3e"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/felgen3e"
+            app:layout_constraintTop_toTopOf="@+id/felgen3e">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout11"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintEnd_toEndOf="@+id/felgen2e"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/constraintLayout9">
+
+                <ImageView
+                    android:id="@+id/felgen3image"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_fast_time"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/felgen3text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="Express"
+                    android:textColor="@color/blackColor"
+                    android:textSize="25sp"
+                    app:layout_constraintEnd_toEndOf="@+id/felgen3image"
+                    app:layout_constraintHorizontal_bias="0.545"
+                    app:layout_constraintStart_toStartOf="@+id/felgen3image"
+                    app:layout_constraintTop_toBottomOf="@+id/felgen3image" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="18€"
+                    android:textColor="@color/blackColor"
+                    android:textSize="25sp"
+                    app:layout_constraintEnd_toEndOf="@+id/felgen3text"
+                    app:layout_constraintStart_toStartOf="@+id/felgen3text"
+                    app:layout_constraintTop_toBottomOf="@+id/felgen3text" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.button.MaterialButton
+            style="?attr/materialButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_marginTop="76dp"
+            android:background="#FF8C00"
+            android:elevation="10dp"
+            android:fontFamily="@font/roboto"
+            android:id="@+id/sendDataButton"
+            android:text="bestatigen"
+            android:backgroundTint="#1C7721"
+            android:textSize="25sp"
+            app:cornerRadius="10dp"
+            app:elevation="10dp"
+            app:layout_constraintEnd_toEndOf="@id/express18e"
+            app:layout_constraintHorizontal_bias="0.499"
+            app:layout_constraintStart_toStartOf="@id/felgen2e"
+            app:layout_constraintTop_toBottomOf="@+id/felgen3e" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:text="Zahler"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toTopOf="@+id/cardView"
+            app:layout_constraintStart_toStartOf="@+id/cardView" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="268dp"
+            android:layout_height="250dp"
+            android:layout_margin="20dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="3dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/felgen2eText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="Felgen     2€"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toTopOf="@+id/felgen3Text"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/felgen1_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/amount_drawable_background"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:textColor="@color/blackColor"
+                    android:textSize="25sp"
+                    app:layout_constraintBaseline_toBaselineOf="@id/felgen2eText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/felgen2eText"
+                    tools:text="14" />
+
+                <TextView
+                    android:id="@+id/felgen3Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="Felgen     3€"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toTopOf="@+id/express_text"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/felgen2eText" />
+
+                <TextView
+                    android:id="@+id/felgen2_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/amount_drawable_background"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:textColor="@color/blackColor"
+                    android:textSize="25sp"
+                    app:layout_constraintBaseline_toBaselineOf="@id/felgen3Text"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/felgen3Text"
+                    tools:text="14" />
+
+                <TextView
+                    android:id="@+id/express_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="Express 18€"
+                    android:textSize="23sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/felgen3Text" />
+
+                <TextView
+                    android:id="@+id/express_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/amount_drawable_background"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:textColor="@color/blackColor"
+                    android:textSize="25sp"
+                    app:layout_constraintBaseline_toBaselineOf="@id/express_text"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/express_text"
+                    tools:text="714" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:text="Historie"
+
+            android:textSize="25sp"
+            app:layout_constraintBottom_toTopOf="@+id/cardView2"
+            app:layout_constraintEnd_toEndOf="@+id/cardView2" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView2"
+            android:layout_width="270dp"
+            android:layout_height="254dp"
+            android:layout_margin="20dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="3dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/work_recycerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:foregroundGravity="center"
+                android:overScrollMode="never"
+                android:clipToPadding="true"
+                android:nestedScrollingEnabled="false"
+                tools:itemCount="6"
+                tools:listitem="@layout/item_list" />
+        </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:id="@+id/storno_button"
+            android:layout_height="wrap_content"
+            android:text="Storno"
+            android:enabled="false"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toStartOf="@id/cardView2"
+            app:layout_constraintBottom_toBottomOf="@id/cardView2"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

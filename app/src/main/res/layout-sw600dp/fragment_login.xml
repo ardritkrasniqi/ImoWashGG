@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/parent_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.loginFragment.LoginFragment">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/email_field"
+            android:layout_width="500dp"
+            app:startIconDrawable="@drawable/ic_baseline_person_24"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="300dp"
+            android:hint="Email"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/email_edit"
+                android:layout_width="500dp"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/password_field"
+            android:layout_width="500dp"
+            app:startIconDrawable="@drawable/ic_baseline_lock_24"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:hint="Password"
+            app:layout_constraintTop_toBottomOf="@id/email_field"
+            app:layout_constraintStart_toStartOf="@id/email_field"
+            app:layout_constraintEnd_toEndOf="@id/email_field">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password_edit"
+                android:layout_width="500dp"
+                android:inputType="textPassword"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/employeeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="108dp"
+            android:layout_marginEnd="32dp"
+            android:drawableEnd="@drawable/ic_baseline_double_arrow_24"
+            android:text="Proceed as employee"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bossButton"
+            android:layout_marginTop="52dp"
+            android:text="Login as Boss"
+            style="@style/Widget.MaterialComponents.Button"
+            android:textSize="23sp"
+            app:layout_constraintEnd_toEndOf="@+id/password_field"
+            app:layout_constraintStart_toStartOf="@+id/password_field"
+            app:layout_constraintTop_toBottomOf="@+id/password_field" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

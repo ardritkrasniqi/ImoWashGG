@@ -1,0 +1,12 @@
+/build
+.google-services.json
+/google-services.json
+
+### Firebase ###
+.idea
+**/node_modules/*
+**/.firebaserc
+
+### Firebase Patch ###
+.runtimeconfig.json
+.firebase/

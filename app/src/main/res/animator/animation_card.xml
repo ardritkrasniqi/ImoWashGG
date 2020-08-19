@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="true" android:state_pressed="true">
+        <objectAnimator android:duration="@android:integer/config_mediumAnimTime"
+            android:propertyName="translationZ" android:valueTo="30dp"
+            android:valueType="floatType" />
+    </item>
+    <item android:state_enabled="true" android:state_pressed="false" android:state_activated="false">
+        <objectAnimator android:duration="@android:integer/config_mediumAnimTime"
+            android:propertyName="translationZ" android:valueTo="0dp"
+            android:valueType="floatType" />
+    </item>
+</selector>
